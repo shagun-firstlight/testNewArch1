@@ -14,11 +14,12 @@ StatusBar,
 Text,
 Button,
 } from 'react-native';
-import {calculator, ColoredView} from 'example-library/src/index'
+import {calculator, ColoredView, advanceCalculator} from 'example-library/src/index'
 const App: () => Node = () => {
 const [currentResult, setResult] = useState<number | null>(null);
 const [currentResult1, setResult1] = useState<number | null>(null);
 const [currentResult2, setResult2] = useState<number | null>(null);
+const [currentResult3, setResult3] = useState<number | null>(null);
 
 return (
     <SafeAreaView>
@@ -41,6 +42,11 @@ return (
     <Button title="Compute" onPress={async () => {
         const result = await calculator.mul({a:3, b:7});
         setResult2(result);
+    }} />
+<Text style={{marginLeft:20, marginTop:20}}>3/7={currentResult3 ?? "??"}</Text>
+    <Button title="Compute" onPress={async () => {
+        const result = await advanceCalculator.div(3,7);
+        setResult3(result);
     }} />
 
 
