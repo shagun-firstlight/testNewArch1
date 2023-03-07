@@ -16,6 +16,7 @@ Button,
 View
 } from 'react-native';
 import {calculator, ColoredView, advanceCalculator, player} from 'example-library/src/index'
+import {MediaTypeValue, DrmTypeValue} from 'example-library/src/NativePlayer'
 const App: () => Node = () => {
 const [currentResult, setResult] = useState<number | null>(null);
 const [currentResult1, setResult1] = useState<number | null>(null);
@@ -55,9 +56,9 @@ return (
         <Button  title="Create Player" onPress={async () => {
                 const result = await player?.createPlayer({
                     mediaURL: 'https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd',
-                    mediaType: "DASH",
+                    mediaType: MediaTypeValue.DASH,
                     drmLicenseURL: "",
-                    drmType: 'NONE'
+                    drmType: DrmTypeValue.NONE
                 });
                 
             }} />

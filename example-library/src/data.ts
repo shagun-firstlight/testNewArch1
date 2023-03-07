@@ -3,8 +3,8 @@ export type IntObj = {
     b:number
 }
 
-export type MediaTypeValue = 'DASH' | 'HLS' | 'SMOOTH_STREAMING' | 'OTHER';
-export type DrmTypeValue = 'WIDEVINE' | 'PLAYREADY' | 'FAIRPLAY' | 'NONE';
+export enum MediaTypeValue {DASH = "DASH" , HLS= 'HLS' , SMOOTH_STREAMING='SMOOTH_STREAMING' , OTHER='OTHER'};
+export enum DrmTypeValue { WIDEVINE='WIDEVINE' , PLAYREADY= 'PLAYREADY' , FAIRPLAY='FAIRPLAY' ,NONE= 'NONE'}
 
 
 export interface PlayerConfig {
