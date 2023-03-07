@@ -17,6 +17,9 @@ Button,
 import {calculator, ColoredView} from 'example-library/src/index'
 const App: () => Node = () => {
 const [currentResult, setResult] = useState<number | null>(null);
+const [currentResult1, setResult1] = useState<number | null>(null);
+const [currentResult2, setResult2] = useState<number | null>(null);
+
 return (
     <SafeAreaView>
     <StatusBar barStyle={'dark-content'}/>
@@ -26,6 +29,18 @@ return (
     <Button title="Compute" onPress={async () => {
         const result = await calculator.add(3, 7);
         setResult(result);
+    }} />
+
+<Text style={{marginLeft:20, marginTop:20}}>3-7={currentResult1 ?? "??"}</Text>
+    <Button title="Compute" onPress={async () => {
+        const result = await calculator.sub(3, 7);
+        setResult1(result);
+    }} />
+
+<Text style={{marginLeft:20, marginTop:20}}>3*7={currentResult2 ?? "??"}</Text>
+    <Button title="Compute" onPress={async () => {
+        const result = await calculator.mul({a:3, b:7});
+        setResult2(result);
     }} />
 
 

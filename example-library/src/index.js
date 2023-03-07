@@ -1,12 +1,10 @@
-// @flow
-import { NativeModules } from 'react-native'
 import { requireNativeComponent } from 'react-native'
 
 const isTurboModuleEnabled = global.__turboModuleProxy != null;
 
 export const calculator = isTurboModuleEnabled ?
-  require("./NativeCalculator").default :
-  NativeModules.Calculator;
+require("./NativeCalculator").calc :
+require("./Calculator").calc;
 
 
 const isFabricEnabled = global.nativeFabricUIManager != null;

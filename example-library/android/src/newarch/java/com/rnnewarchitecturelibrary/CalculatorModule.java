@@ -9,6 +9,8 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import java.util.Map;
 import java.util.HashMap;
+import com.facebook.react.bridge.*;
+import android.util.Log;
 
 public class CalculatorModule extends NativeCalculatorSpec {
 
@@ -25,5 +27,17 @@ public class CalculatorModule extends NativeCalculatorSpec {
     @Override
     public void add(double a, double b, Promise promise) {
         CalculatorModuleImpl.add(a, b, promise);
+    }
+    
+    @Override
+    public void sub(double a, double b, Promise promise) {
+        CalculatorModuleImpl.sub(a, b, promise);
+    }
+
+    @Override
+    public void mul(ReadableMap map, Promise promise) {
+         int a = map.getInt("a");
+         int b = map.getInt("b");
+         CalculatorModuleImpl.mul(a, b, promise);
     }
 }
