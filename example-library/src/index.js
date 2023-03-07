@@ -12,6 +12,9 @@ export const advanceCalculator = isTurboModuleEnabled ?
       require("./NativeAdvanceCalculator").advCalc :
       require("./AdvanceCalculator").advCalc;
 
+export const player = isTurboModuleEnabled ?
+      require("./NativePlayer").player :
+      require("./Player").player;
 
 export  const ColoredView = isFabricEnabled ?
       require("./ColoredViewNativeComponent").default :

@@ -13,8 +13,9 @@ SafeAreaView,
 StatusBar,
 Text,
 Button,
+View
 } from 'react-native';
-import {calculator, ColoredView, advanceCalculator} from 'example-library/src/index'
+import {calculator, ColoredView, advanceCalculator, player} from 'example-library/src/index'
 const App: () => Node = () => {
 const [currentResult, setResult] = useState<number | null>(null);
 const [currentResult1, setResult1] = useState<number | null>(null);
@@ -32,23 +33,35 @@ return (
         setResult(result);
     }} />
 
-<Text style={{marginLeft:20, marginTop:20}}>3-7={currentResult1 ?? "??"}</Text>
-    <Button title="Compute" onPress={async () => {
-        const result = await calculator.sub(3, 7);
-        setResult1(result);
-    }} />
+    <Text style={{marginLeft:20, marginTop:20}}>3-7={currentResult1 ?? "??"}</Text>
+        <Button title="Compute" onPress={async () => {
+            const result = await calculator.sub(3, 7);
+            setResult1(result);
+        }} />
 
-<Text style={{marginLeft:20, marginTop:20}}>3*7={currentResult2 ?? "??"}</Text>
-    <Button title="Compute" onPress={async () => {
-        const result = await calculator.mul({a:3, b:7});
-        setResult2(result);
-    }} />
-<Text style={{marginLeft:20, marginTop:20}}>3/7={currentResult3 ?? "??"}</Text>
-    <Button title="Compute" onPress={async () => {
-        const result = await advanceCalculator.div(3,7);
-        setResult3(result);
-    }} />
+    <Text style={{marginLeft:20, marginTop:20}}>3*7={currentResult2 ?? "??"}</Text>
+        <Button title="Compute" onPress={async () => {
+            const result = await calculator.mul({a:3, b:7});
+            setResult2(result);
+        }} />
 
+    <Text style={{marginLeft:20, marginTop:20}}>3/7={currentResult3 ?? "??"}</Text>
+        <Button title="Compute" onPress={async () => {
+            const result = await advanceCalculator.div(3,7);
+            setResult3(result);
+        }} />
+
+    <View style={{marginTop:20}}>
+        <Button  title="Create Player" onPress={async () => {
+                const result = await player?.createPlayer({
+                    mediaURL: 'https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd',
+                    mediaType: "DASH",
+                    drmLicenseURL: "",
+                    drmType: 'NONE'
+                });
+                
+            }} />
+    </View>
 
     </SafeAreaView>
 );

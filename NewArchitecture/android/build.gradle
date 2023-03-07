@@ -13,9 +13,47 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url "https://firstlight.jfrog.io/artifactory/fl-android-sdk-libs-release"
+            credentials {
+                username = "${rootProject.jFrogUser}"
+                password = "${rootProject.jFrogPassword}"
+            }
+        }
+        maven {
+            url "https://firstlight.jfrog.io/artifactory/fl-android-sdk-libs-snapshot"
+            credentials {
+                username = "${rootProject.jFrogUser}"
+                password = "${rootProject.jFrogPassword}"
+            }
+        }
     }
     dependencies {
         classpath("com.android.tools.build:gradle:7.3.1")
         classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
+
+    }
+}
+allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        jcenter()
+        gradlePluginPortal()
+        maven {
+            url "https://firstlight.jfrog.io/artifactory/fl-android-sdk-libs-release"
+            credentials {
+                username = "${rootProject.jFrogUser}"
+                password = "${rootProject.jFrogPassword}"
+            }
+        }
+        maven {
+            url "https://firstlight.jfrog.io/artifactory/fl-android-sdk-libs-snapshot"
+            credentials {
+                username = "${rootProject.jFrogUser}"
+                password = "${rootProject.jFrogPassword}"
+            }
+        }
     }
 }

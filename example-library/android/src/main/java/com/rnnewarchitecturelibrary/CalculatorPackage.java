@@ -9,7 +9,6 @@ import com.facebook.react.TurboReactPackage;
 import com.facebook.react.uimanager.ViewManager;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,10 +19,13 @@ public class CalculatorPackage extends TurboReactPackage {
     @Override
     public NativeModule getModule(String name, ReactApplicationContext reactContext) {
         if (name.equals(CalculatorModuleImpl.NAME)) {
-            return new CalculatorModule(reactContext);
+            return new com.rnnewarchitecturelibrary.CalculatorModule(reactContext);
         }else if (name.equals(AdvanceCalculatorModuleImpl.NAME)) {
-            return new AdvanceCalculatorModule(reactContext);
-        } else {
+            return new com.rnnewarchitecturelibrary.AdvanceCalculatorModule(reactContext);
+        }else if (name.equals(PlayerModuleImpl.NAME)) {
+            return new com.rnnewarchitecturelibrary.PlayerModule(reactContext);
+        } 
+        else {
             return null;
         }
     }
@@ -49,6 +51,17 @@ public class CalculatorPackage extends TurboReactPackage {
                     new ReactModuleInfo(
                             AdvanceCalculatorModuleImpl.NAME,
                             AdvanceCalculatorModuleImpl.NAME,
+                            false, // canOverrideExistingModule
+                            false, // needsEagerInit
+                            true, // hasConstants
+                            false, // isCxxModule
+                            isTurboModule // isTurboModule
+            ));
+            moduleInfos.put(
+                    PlayerModuleImpl.NAME,
+                    new ReactModuleInfo(
+                            PlayerModuleImpl.NAME,
+                            PlayerModuleImpl.NAME,
                             false, // canOverrideExistingModule
                             false, // needsEagerInit
                             true, // hasConstants

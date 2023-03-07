@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f5a2717-9820-4179-9f6a-10d60e632532" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../NewArchitecture/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OldArchitecture/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../OldArchitecture/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OldArchitecture/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../OldArchitecture/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OldArchitecture/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../OldArchitecture/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OldArchitecture/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../OldArchitecture/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rnnewarchitecturelibrary/AdvanceCalculatorModuleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rnnewarchitecturelibrary/AdvanceCalculatorModuleImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rnnewarchitecturelibrary/CalculatorModuleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rnnewarchitecturelibrary/CalculatorModuleImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rnnewarchitecturelibrary/CalculatorPackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rnnewarchitecturelibrary/CalculatorPackage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rnnewarchitecturelibrary/ColoredViewManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rnnewarchitecturelibrary/ColoredViewManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oldarch/java/com/rnnewarchitecturelibrary/AdvanceCalculatorModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oldarch/java/com/rnnewarchitecturelibrary/AdvanceCalculatorModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oldarch/java/com/rnnewarchitecturelibrary/CalculatorModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oldarch/java/com/rnnewarchitecturelibrary/CalculatorModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oldarch/java/com/rnnewarchitecturelibrary/ColoredViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oldarch/java/com/rnnewarchitecturelibrary/ColoredViewManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/data.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +76,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2MgSWTvfn2K702pzRUcs1b7cGda" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -66,8 +89,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "android-custom-view/Users/Shared/newArch/test5/testNewArch1/example-library/android/src/main/java/com/rnnewarchitecturelibrary/ColoredView.java_SELECTED": "ColoredView",
     "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true"
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "last_opened_file_path": "/Users/Shared/newArch/test5/testNewArch1/example-library/android"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

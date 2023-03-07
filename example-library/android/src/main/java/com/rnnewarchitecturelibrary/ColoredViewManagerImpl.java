@@ -1,6 +1,5 @@
 package com.rnnewarchitecturelibrary;
 
-import androidx.annotation.Nullable;
 import com.facebook.react.uimanager.ThemedReactContext;
 import android.graphics.Color;
 
