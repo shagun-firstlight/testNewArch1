@@ -1,12 +1,11 @@
 import type { TurboModule } from 'react-native';
 import { TurboModuleRegistry } from 'react-native';
 
-
 // export type MediaTypeValue = 'DASH' | 'HLS' | 'SMOOTH_STREAMING' | 'OTHER';
 // export type DrmTypeValue = 'WIDEVINE' | 'PLAYREADY' | 'FAIRPLAY' | 'NONE';
 
 
-export interface PlayerConfig {
+export type PlayerConfig = {
   mediaURL: string;
   mediaType: string;
   drmLicenseURL?: string | undefined | null;
@@ -14,8 +13,7 @@ export interface PlayerConfig {
 }
 
 export interface Spec extends TurboModule {
-    // your module methods go here, for example:
-    createPlater(a: PlayerConfig): Promise<number>;
+    createPlayer(playerConfig: PlayerConfig): Promise<number>;
 }
 
 const player = TurboModuleRegistry.get<Spec>('Player');
