@@ -15,7 +15,14 @@ export type PlayerConfig = {
 }
 
 export interface Spec extends TurboModule {
-    createPlayer(playerConfig: PlayerConfig): Promise<number>;
+  initWithConfig(playerConfig: PlayerConfig): Promise<number>;
+  getNativeID(): Promise<number>;
+  load(): Promise<void>;
+  play(): Promise<void>;
+  pause(): Promise<void>;
+  stop(): Promise<void>;
+  dispose(): Promise<void>;
+  seek(seekPosition: number): Promise<void>;
 }
 
 const player = TurboModuleRegistry.get<Spec>('Player');

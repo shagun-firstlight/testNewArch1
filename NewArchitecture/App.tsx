@@ -6,7 +6,6 @@
  * @flow strict-local
  */
 import React from 'react';
-import {useState} from "react";
 import type {Node} from 'react';
 import {
 SafeAreaView,
@@ -22,13 +21,19 @@ return (
     <StatusBar barStyle={'dark-content'}/>
     <ColoredView color="#FF0099" style={{marginLeft:10, marginTop:20, width:100, height:100}}/>
     <Button  title="Create Player" onPress={async () => {
-            const result = await player?.createPlayer({
+            await player.initWithConfig({
                 mediaURL: 'https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd',
                 mediaType: MediaTypeValue.DASH,
                 drmLicenseURL: "",
                 drmType: DrmTypeValue.NONE
             });
             
+        }} />
+        <Button  title="play" onPress={async () => {
+            await player.play();
+        }} />
+        <Button  title="pause" onPress={async () => {
+            await player.pause();
         }} />
     </SafeAreaView>
 );

@@ -14,19 +14,47 @@ import android.util.Log;
 
 public class PlayerModule extends NativePlayerSpec {
     private ReactApplicationContext reactContext;
+    private int PlayerID;
+
     PlayerModule(ReactApplicationContext context) {
         super(context);
         reactContext = context;
     }
-
     @Override
     @NonNull
     public String getName() {
         return PlayerModuleImpl.NAME;
     }
-
     @Override
-    public void createPlayer(ReadableMap map, Promise promise) {
-        PlayerModuleImpl.createPlayer(map, reactContext, promise);
+    public void initWithConfig(ReadableMap map, Promise promise) {
+        PlayerID = PlayerModuleImpl.initWithConfig(map, reactContext, promise);
+    }
+    @Override
+    public void getNativeID(Promise promise){
+        promise.resolve(PlayerID);
+    }
+    @Override
+    public void load(Promise promise){
+        PlayerModuleImpl.load(PlayerID, promise);
+    }
+    @Override
+    public void play(Promise promise){
+        PlayerModuleImpl.play(PlayerID, promise);
+    }
+    @Override
+    public void pause(Promise promise){
+        PlayerModuleImpl.pause(PlayerID, promise);
+    }
+    @Override
+    public void stop(Promise promise){
+        PlayerModuleImpl.stop(PlayerID, promise);
+    }
+    @Override
+    public void dispose(Promise promise){
+        PlayerModuleImpl.dispose(PlayerID, promise);
+    }
+    @Override
+    public void seek(double seekPosition, Promise promise){
+        PlayerModuleImpl.seek(seekPosition, PlayerID, promise);
     }
 }
