@@ -1,9 +1,9 @@
 {
     "name": "example-library",
     "version": "0.0.1",
-    "description": "Showcase Turbomodule with backward compatibility",
-    "react-native": "src/index",
-    "source": "src/index",
+    "description": "sample bridge for new and old architecture",
+    "react-native": "src/index.ts",
+    "source": "src/index.ts",
     "files": [
         "src",
         "android",

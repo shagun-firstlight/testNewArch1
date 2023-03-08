@@ -4,20 +4,22 @@ const isTurboModuleEnabled = global.__turboModuleProxy != null;
 const isFabricEnabled = global.nativeFabricUIManager != null;
 
 
-export const calculator = isTurboModuleEnabled ?
+const calculator = isTurboModuleEnabled ?
       require("./newArch/NativeCalculator").calc :
       require("./oldArch/Calculator").calc;
 
-export const advanceCalculator = isTurboModuleEnabled ?
+const advanceCalculator = isTurboModuleEnabled ?
       require("./newArch/NativeAdvanceCalculator").advCalc :
       require("./oldArch/AdvanceCalculator").advCalc;
 
-export const player = isTurboModuleEnabled ?
+const player = isTurboModuleEnabled ?
       require("./newArch/NativePlayer").player :
       require("./oldArch/Player").player;
 
-export  const ColoredView = isFabricEnabled ?
+const ColoredView = isFabricEnabled ?
       require("./ColoredViewNativeComponent").default :
       requireNativeComponent("ColoredView")
 
 
+export { calculator, advanceCalculator, player, ColoredView };
+export * from './typings/data';

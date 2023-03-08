@@ -10,12 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f5a2717-9820-4179-9f6a-10d60e632532" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../NewArchitecture/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewArchitecture/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../NewArchitecture/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewArchitecture/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OldArchitecture/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OldArchitecture/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../OldArchitecture/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OldArchitecture/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../OldArchitecture/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/NativePlayer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Player.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/data.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -1,5 +1,5 @@
 import { NativeModules } from 'react-native';
-import { PlayerConfig } from '../data';
+import { PlayerConfig } from '../typings/data';
 
 const nativePlayer = NativeModules.Player;
 
