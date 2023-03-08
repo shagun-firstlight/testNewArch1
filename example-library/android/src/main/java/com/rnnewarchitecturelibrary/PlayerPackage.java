@@ -13,16 +13,12 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CalculatorPackage extends TurboReactPackage {
+public class PlayerPackage extends TurboReactPackage {
 
     @Nullable
     @Override
     public NativeModule getModule(String name, ReactApplicationContext reactContext) {
-        if (name.equals(CalculatorModuleImpl.NAME)) {
-            return new com.rnnewarchitecturelibrary.CalculatorModule(reactContext);
-        }else if (name.equals(AdvanceCalculatorModuleImpl.NAME)) {
-            return new com.rnnewarchitecturelibrary.AdvanceCalculatorModule(reactContext);
-        }else if (name.equals(PlayerModuleImpl.NAME)) {
+        if (name.equals(PlayerModuleImpl.NAME)) {
             return new com.rnnewarchitecturelibrary.PlayerModule(reactContext);
         } 
         else {
@@ -35,28 +31,6 @@ public class CalculatorPackage extends TurboReactPackage {
         return () -> {
             final Map<String, ReactModuleInfo> moduleInfos = new HashMap<>();
             boolean isTurboModule = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
-            moduleInfos.put(
-                    CalculatorModuleImpl.NAME,
-                    new ReactModuleInfo(
-                            CalculatorModuleImpl.NAME,
-                            CalculatorModuleImpl.NAME,
-                            false, // canOverrideExistingModule
-                            false, // needsEagerInit
-                            true, // hasConstants
-                            false, // isCxxModule
-                            isTurboModule // isTurboModule
-            ));
-            moduleInfos.put(
-                    AdvanceCalculatorModuleImpl.NAME,
-                    new ReactModuleInfo(
-                            AdvanceCalculatorModuleImpl.NAME,
-                            AdvanceCalculatorModuleImpl.NAME,
-                            false, // canOverrideExistingModule
-                            false, // needsEagerInit
-                            true, // hasConstants
-                            false, // isCxxModule
-                            isTurboModule // isTurboModule
-            ));
             moduleInfos.put(
                     PlayerModuleImpl.NAME,
                     new ReactModuleInfo(

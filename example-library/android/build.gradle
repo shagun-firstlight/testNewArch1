@@ -89,7 +89,7 @@ dependencies {
 if (isNewArchitectureEnabled()) {
     react {
         jsRootDir = file("../src/")
-        libraryName = "calculator"
+        libraryName = "player"
         codegenJavaPackageName = "com.rnnewarchitecturelibrary"
     }
 }
