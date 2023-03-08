@@ -16,7 +16,7 @@ Button,
 View
 } from 'react-native';
 import {calculator, ColoredView, advanceCalculator, player} from 'example-library/src/index'
-import {MediaTypeValue, DrmTypeValue} from 'example-library/src/NativePlayer'
+import {MediaTypeValue, DrmTypeValue} from 'example-library/src/newArch/NativePlayer'
 const App: () => Node = () => {
 const [currentResult, setResult] = useState<number | null>(null);
 const [currentResult1, setResult1] = useState<number | null>(null);

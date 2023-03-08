@@ -1,5 +1,5 @@
 import { NativeModules } from 'react-native';
-import type { IntObj } from './data';
+import { IntObj } from '../data';
 
 const nativeCalculator = NativeModules.Calculator;
 

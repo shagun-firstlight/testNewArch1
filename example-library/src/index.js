@@ -5,16 +5,16 @@ const isFabricEnabled = global.nativeFabricUIManager != null;
 
 
 export const calculator = isTurboModuleEnabled ?
-      require("./NativeCalculator").calc :
-      require("./Calculator").calc;
+      require("./newArch/NativeCalculator").calc :
+      require("./oldArch/Calculator").calc;
 
 export const advanceCalculator = isTurboModuleEnabled ?
-      require("./NativeAdvanceCalculator").advCalc :
-      require("./AdvanceCalculator").advCalc;
+      require("./newArch/NativeAdvanceCalculator").advCalc :
+      require("./oldArch/AdvanceCalculator").advCalc;
 
 export const player = isTurboModuleEnabled ?
-      require("./NativePlayer").player :
-      require("./Player").player;
+      require("./newArch/NativePlayer").player :
+      require("./oldArch/Player").player;
 
 export  const ColoredView = isFabricEnabled ?
       require("./ColoredViewNativeComponent").default :
