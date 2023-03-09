@@ -15,7 +15,7 @@ View
 } from 'react-native';
 import {useState} from "react";
 
-import {ColoredView, player, QpNxgPlaybackView} from 'example-library'
+import {player, QpNxgPlaybackView} from 'example-library'
 import {MediaTypeValue, DrmTypeValue} from 'example-library/src/newArch/NativePlayer'
 const App: () => Node = () => {
     const [playerID, setPlayerID] = useState<number | null>(null);
@@ -23,7 +23,6 @@ const App: () => Node = () => {
 return (
     <SafeAreaView>
     <StatusBar barStyle={'dark-content'}/>
-    <ColoredView color="#FF0099" style={{marginLeft:10, marginTop:20, width:100, height:100}}/>
     <Button  title="Create Player" onPress={async () => {
              let a = await player.initWithConfig({
                 mediaURL: 'https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd',

@@ -50,7 +50,6 @@ public class PlayerPackage extends TurboReactPackage {
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         List<ViewManager> viewManagers = new ArrayList<>();
-        viewManagers.add(new com.rnnewarchitecturelibrary.ColoredViewManager(reactContext));
         viewManagers.add(new com.rnnewarchitecturelibrary.QpNxgPlaybackViewManager(reactContext));
 
         return viewManagers;
