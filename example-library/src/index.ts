@@ -12,6 +12,10 @@ const ColoredView = isFabricEnabled ?
       require("./ColoredViewNativeComponent").default :
       requireNativeComponent("ColoredView")
 
+const QpNxgPlaybackView = isFabricEnabled ?
+      require("./newArch/QpNxgPlaybackViewNativeComponent").default :
+      requireNativeComponent('QpNxgPlaybackView');
 
-export { player, ColoredView };
+
+export { player, ColoredView, QpNxgPlaybackView };
 export * from './typings/data';
